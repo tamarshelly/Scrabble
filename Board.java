@@ -156,9 +156,7 @@ public class Board {
                 }
             }
             else //double letter ot triple letter
-            {
                 totalScore += letterScore * bonusScore;
-            }
             if (vertical) row++;
             else col++;
         }
