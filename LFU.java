@@ -5,7 +5,6 @@ import java.util.*;
 
 public class LFU implements CacheReplacementPolicy {
 //least frequently used
-    int lowestCount = 1;
 LinkedHashMap<String, Integer> wordsMap;
     public LFU(){
         wordsMap = new LinkedHashMap<String, Integer>();
@@ -23,7 +22,7 @@ LinkedHashMap<String, Integer> wordsMap;
 
     @Override
     public String remove() {
-        //return the string we *ask for* it the minimum time - the word with the smallest count
+        //return the string we ask for it the minimum time - the word with the smallest count
         int minCount=100; //find min count
         Map.Entry searchedWord;
         for(Map.Entry w: wordsMap.entrySet()){
